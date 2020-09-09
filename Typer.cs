@@ -8,7 +8,7 @@ namespace TextTyper
 	public abstract class Typer
 	{
 		protected const float DefaultTypingSpeed = 20f;
-		protected const float DefaultMistakeRate = 0.025f;
+		protected const float DefaultMistakeRate = 0.05f;
 
 		protected Random r = new Random();
 		protected int sleepTime;

@@ -11,6 +11,7 @@ namespace TextTyper
 
 			test.TestChangeTypingSpeed();
 			Console.WriteLine();
+
 			test.TestChangeMistakeRate();
 			Console.WriteLine();
 

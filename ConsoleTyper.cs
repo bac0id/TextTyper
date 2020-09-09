@@ -13,15 +13,12 @@ namespace TextTyper
 		}
 
 		public override void EraseLastWord(string lastTypedWord) {
-			Console.CursorLeft++;
 			for (int i = 0; i < lastTypedWord.Length; ++i) {
-				Console.CursorLeft -= 2;
-				// these 2 sentenses can be replaced by PressKeyboard(' ');
-				// but the typer doesn't really press the SPACE key.
+				Console.Write('\b');
 				Console.Write(' ');
+				Console.Write('\b');
 				base.Sleep();
 			}
-			Console.CursorLeft--;
 		}
 	}
 }
