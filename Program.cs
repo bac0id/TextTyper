@@ -7,10 +7,12 @@ namespace TextTyper
 		static void Main(string[] args) {
 			TyperTest test = new TyperTest();
 			test.TestTyper();
-			//Console.WriteLine();
-			//test.TestChangeTypingSpeed();
-			//Console.WriteLine();
-			//test.TestChangeMistakeRate();
+			Console.WriteLine();
+
+			test.TestChangeTypingSpeed();
+			Console.WriteLine();
+			test.TestChangeMistakeRate();
+			Console.WriteLine();
 
 			Console.ReadKey();
 		}
