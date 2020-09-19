@@ -14,7 +14,7 @@ namespace TextTyper
 
 		public override void EraseLastWord(string lastTypedWord) {
 			for (int i = 0; i < lastTypedWord.Length; ++i) {
-				Console.Write(“\b \b");
+				Console.Write("\b \b");
 				base.Sleep();
 			}
 		}
