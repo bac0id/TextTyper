@@ -1,22 +1,20 @@
 ﻿using System;
 
-namespace TextTyper
-{
-	public class ConsoleTyper : Typer
-	{
-		public ConsoleTyper(float charPerSecond = DefaultTypingSpeed, float mistakeRate = DefaultMistakeRate)
-			: base(charPerSecond, mistakeRate) {
-		}
+namespace TextTyper {
+    public class ConsoleTyper : Typer {
+        public ConsoleTyper(float charPerSecond = DefaultTypingSpeed, float mistakeRate = DefaultMistakeRate)
+            : base(charPerSecond, mistakeRate) {
+        }
 
-		public override void WriteChar(char c) {
-			Console.Write(c);
-		}
+        public override void WriteChar(char c) {
+            Console.Write(c);
+        }
 
-		public override void EraseLastWord(string lastTypedWord) {
-			for (int i = 0; i < lastTypedWord.Length; ++i) {
-				Console.Write("\b \b");
-				base.Sleep();
-			}
-		}
-	}
+        public override void EraseLastWord(string lastTypedWord) {
+            for (int i = 0; i < lastTypedWord.Length; ++i) {
+                Console.Write("\b \b");
+                base.Sleep();
+            }
+        }
+    }
 }
