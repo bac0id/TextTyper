@@ -48,8 +48,7 @@ namespace TextTyper {
                     isLastWordMistaken = false;
                 } else {
                     // type in next word
-                    bool isMistaken = r.NextDouble() < this.MistakeRate;
-                    if (isMistaken) {
+                    if (this.WillNextWordMistaken()) {
                         this.WriteMistakenWord(words[p]);
                         isLastWordMistaken = true;
                     } else {
@@ -96,6 +95,10 @@ namespace TextTyper {
                 c1 = (char)r.Next('a', 'z' + 1);
             }
             return c1;
+        }
+
+        private bool WillNextWordMistaken() {
+            return r.NextDouble() < this.MistakeRate;
         }
 
         protected void Sleep() {
